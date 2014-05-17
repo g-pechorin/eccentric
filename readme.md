@@ -5,6 +5,8 @@ This is a "hold my beer" attempt to create an embeddable relational immutable pl
 I wanted it to replace JSON based spiderwebs.
 It is built with plain-old Maven.
 For now it's on a DropBox repository `https://dl.dropboxusercontent.com/u/15094498/maven/repository-SNAPSHOT/`
+
+
 Someday ... maybe I'll bother with Central
 
 		<dependency>
