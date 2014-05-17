@@ -38,15 +38,3 @@ TODO
 
 It doesn't do any error checking
 
-... vs JSON
------------
-
-JSON is a widely understood format.
-... but ... if you're storing trees of data in it you're making a leap.
-If you're looking at the .json files; you're doing something very, very wrong.
-The issue is that humans shouldn't be manipulating text structures by hand; that's what computers are for!
-In the scenario I envisage; JSON gives you a way to structure your data on disk, but you still need something to manipulate that data.
-This tool gives you a closed box with some buttons - you can open the box but you really shouldn't have to.
-It enforces some bits of relationally logic for you; JSON does not.
-
-... and I could have written this guy against JSON but it would have sucked!
