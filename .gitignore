@@ -1,0 +1,4 @@
+.idea/
+src/main/antlr4/com/peterlavalle/eccentric/loader/gen/
+target/
+*.iml
