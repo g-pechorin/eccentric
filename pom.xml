@@ -6,9 +6,10 @@
 	<groupId>com.peterlavalle.eccentric</groupId>
 	<artifactId>eccentric</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>Eccentric Data Tree</name>
 
-	<!-- copy and pasted POM -->
+	<name>Eccentric Data Tree</name>
+	<description>See `readme.md`</description>
+	<inceptionYear>2014</inceptionYear>
 
 	<licenses>
 		<license>
@@ -19,6 +20,15 @@
 	</licenses>
 
 	<url>https://github.com/g-pechorin/eccentric</url>
+
+	<developers>
+		<developer>
+			<name>Peter LaValle</name>
+			<roles>
+				<role>Inquisitional Wizard</role>
+			</roles>
+		</developer>
+	</developers>
 
 	<scm>
 		<tag>GitHub</tag>
@@ -77,45 +87,6 @@
 	</properties>
 
 	<profiles>
-
-		<!-- magic to add some blurbs -->
-		<profile>
-			<id>os.linux</id>
-			<activation>
-				<os>
-					<family>linux</family>
-				</os>
-			</activation>
-			<properties>
-				<os.family>linux</os.family>
-				<os.executable></os.executable>
-			</properties>
-		</profile>
-		<profile>
-			<id>os.windows</id>
-			<activation>
-				<os>
-					<family>windows</family>
-				</os>
-			</activation>
-			<properties>
-				<os.family>windows</os.family>
-				<os.executable>.exe</os.executable>
-			</properties>
-		</profile>
-		<profile>
-			<id>os.mac</id>
-			<activation>
-				<os>
-					<family>mac</family>
-				</os>
-			</activation>
-			<properties>
-				<os.family>mac</os.family>
-				<os.executable></os.executable>
-			</properties>
-		</profile>
-
 		<profile>
 			<id>release</id>
 			<distributionManagement>
@@ -147,21 +118,8 @@
 		</profile>
 	</profiles>
 
-
 	<build>
-		<resources>
-			<!-- rather than obsessing over how to disable processing on an existing resources folder, we're "just" writing two folders here -->
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-			</resource>
-			<resource>
-				<directory>src/main/classpath</directory>
-				<filtering>false</filtering>
-			</resource>
-		</resources>
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-plugin</artifactId>
@@ -197,7 +155,6 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-
 
 			<plugin>
 				<groupId>org.scala-tools</groupId>
@@ -242,12 +199,6 @@
 					<showDeprecation>true</showDeprecation>
 					<showWarnings>true</showWarnings>
 				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>2.4</version>
 			</plugin>
 
 			<!-- sneak ${project.basedir} into the tests so that I can find the demo's shaders in the compiler tests -->
@@ -295,6 +246,8 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- compile antlr templates -->
 			<plugin>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-maven-plugin</artifactId>
