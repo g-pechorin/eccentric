@@ -6,6 +6,7 @@
 	<groupId>com.peterlavalle.eccentric</groupId>
 	<artifactId>eccentric</artifactId>
 	<version>1.0-SNAPSHOT</version>
+	<name>Eccentric Data Tree</name>
 
 	<!-- copy and pasted POM -->
 
@@ -16,6 +17,15 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<url>https://github.com/g-pechorin/eccentric</url>
+
+	<scm>
+		<tag>GitHub</tag>
+		<url>${project.url}</url>
+		<connection>scm:jgit:https://github.com/g-pechorin/eccentric.git</connection>
+		<developerConnection>scm:jgit:git@github.com:g-pechorin/eccentric.git</developerConnection>
+	</scm>
 
 	<distributionManagement>
 		<repository>
