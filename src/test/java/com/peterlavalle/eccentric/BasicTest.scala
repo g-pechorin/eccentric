@@ -9,6 +9,9 @@ import org.antlr.v4.runtime.ANTLRInputStream
 import org.easymock.EasyMock
 
 class BasicTest extends TestCase {
+	/**
+	 * Test that the system turns on without pissing itself
+	 */
 	def testCreationAndStorage() {
 		val data = {
 			var data = Root()
@@ -35,6 +38,10 @@ class BasicTest extends TestCase {
 		assertEquals(text, RootWriter(loaded))
 	}
 
+	/**
+	 * Crudely test the insertion and query stuff
+	 * 
+	 */
 	def testVisit() {
 		val peter = "abcb7a5e-e1c0-40c6-abfe-a5e22a642ba6"
 		val niki = "4f60dc27-5c68-4410-a452-40a4747dd7cd"
